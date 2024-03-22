@@ -8,8 +8,8 @@ help: ## Outputs this help screen
 
 install: ## Install stack, assets and vendors
 	bin/composer install
-	php bin/console d:m:m -n
 	npm install
+	$(MAKE) build-assets
 
 start: ## Start the stack (you can access the project on localhost:8080 after that)
 	symfony server:start -d --no-tls --port=8080
