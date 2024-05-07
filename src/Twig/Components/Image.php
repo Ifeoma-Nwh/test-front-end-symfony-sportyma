@@ -8,7 +8,6 @@ use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 
 class Image
 {
-  public string $class;
   public string $url;
   public string $alt;
 }

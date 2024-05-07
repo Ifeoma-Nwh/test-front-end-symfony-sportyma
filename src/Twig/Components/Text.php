@@ -8,6 +8,6 @@ use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 
 class Text
 {
-  public string $class;
-  public string $value;
+  public string $tag;
+  public string $text;
 }
