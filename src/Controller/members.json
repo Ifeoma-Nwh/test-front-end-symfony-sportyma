@@ -1,0 +1,89 @@
+{
+  "members": [
+    {
+      "image": "image-1.png",
+      "nom": "Alexandre Miale",
+      "naissance": "25/07/1993",
+      "equipes": [
+        {
+          "role": "Joueur",
+          "team": "Sénior-Equipe 1"
+        }
+      ],
+      "connexion": "26/09/2023",
+      "contacter": "message-solid.svg"
+    },
+    {
+      "image": "image-2.jpeg",
+      "nom": "Abraham Teddy Glossoa",
+      "naissance": "25/07/1993",
+      "equipes": [
+        {
+          "role": "Joueur",
+          "team": "Sénior-Equipe 1"
+        }
+      ],
+      "connexion": "",
+      "contacter": "message-solid.svg"
+    },
+    {
+      "image": "image-3.jpeg",
+      "nom": "Azerty Ajoutclubsansevent",
+      "naissance": "25/07/1993",
+      "equipes": [
+        {
+          "role": "Joueur",
+          "team": "Sénior-Equipe 1"
+        },
+        {
+          "role": "Staff",
+          "team": "Sénior-Equipe 1"
+        }
+      ],
+      "connexion": "26/09/2023",
+      "contacter": "message-solid.svg"
+    },
+    {
+      "image": "image-4.jpeg",
+      "nom": "Bruno Miguel Rodrigues Soa...",
+      "naissance": "25/07/1993",
+      "equipes": [
+        {
+          "role": "Joueur",
+          "team": "Sénior-Equipe 1"
+        },
+        {
+          "role": "Joueur",
+          "team": "Sénior-Equipe 1"
+        }
+      ],
+      "connexion": "",
+      "contacter": "message-solid.svg"
+    },
+    {
+      "image": "image-5.png",
+      "nom": "Lucas Berthier",
+      "naissance": "25/07/1993",
+      "equipes": [
+        {
+          "role": "Joueur",
+          "team": "Sénior-Equipe 1"
+        },
+        {
+          "role": "Staff",
+          "team": "Sénior-Equipe 1"
+        },
+        {
+          "role": "",
+          "team": "U20 - Non affecté"
+        },
+        {
+          "role": "",
+          "team": "U19 - Non affecté"
+        }
+      ],
+      "connexion": "26/09/2023",
+      "contacter": "message-solid.svg"
+    }
+  ]
+}

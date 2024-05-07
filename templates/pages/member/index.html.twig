@@ -3,5 +3,6 @@
 {% block body %}
 	<div class="container">
 		<h1 class="h2 fw-medium mt-5 color-text">Membres du club</h1>
+		{% include "components/templates/Members.html.twig" with {'members': members} %}
 	</div>
 {% endblock %}

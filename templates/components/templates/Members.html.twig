@@ -1,0 +1,58 @@
+<div class="mt-5 mb-3">
+	<div class="search-field">
+		<twig:atoms:Input type="text" id="" name="" placeholder="Rechercher un membre"/>
+	</div>
+
+	<div class="d-flex">
+		<twig:organisms:DropdownType text="Type"/>
+		<twig:organisms:DropdownConnexion text="Connexion"/>
+	</div>
+
+</div>
+
+<div class="mt-4">
+	<table class="w-100 overflow-x-auto">
+		<twig:organisms:TableHead/>
+		<tbody>
+			{% for member in members %}
+				<tr class='color-bg-white'>
+					<td>
+						<div>
+							<twig:atoms:Text tag="span" text="{{member.image}}"/>
+							<twig:atoms:Text tag="span" text="{{member.nom}}"/>
+						</div>
+					</td>
+					<td>
+						<twig:atoms:Text tag="p" text="{{member.naissance}}"/>
+					</td>
+					<td>
+						{% for equipe in member.equipes %}
+							{% if equipe.role != "" %}
+								<div class="d-flex">
+									{% set color = (equipe.role == "Staff") ? "color-blue" : "color-grey" %}
+									<twig:atoms:Text class="pe-1 {{color}}" tag="p" text="{{equipe.role}}"/>
+									<twig:atoms:Text tag="p" text="{{equipe.team}}"/>
+								</div>
+							{% endif %}
+							{% if equipe.role == "" %}
+								<div>
+									<twig:atoms:Text class="color-red" tag="p" text="{{equipe.team}}"/>
+								</div>
+							{% endif %}
+						{% endfor %}
+					</td>
+					<td>
+						{% if member.connexion != "" %}
+							<twig:atoms:Text tag="p" text="{{member.connexion}}"/>
+						{% else %}
+							<twig:atoms:Text tag="p" text="Jamais connecté"/>
+						{% endif %}
+					</td>
+					<td>
+						<twig:atoms:Text tag="span" text="{{member.contacter}}"/>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>

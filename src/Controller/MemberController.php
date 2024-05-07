@@ -10,6 +10,9 @@ class MemberController extends AbstractController
 {
     public function __invoke()
     {
-        return $this->render('pages/member/index.html.twig', []);
+        $jsonFilePath = $this->getParameter('kernel.project_dir') . '/src/Controller/members.json';
+        $jsonData = file_get_contents($jsonFilePath);
+        $data = json_decode($jsonData, true);
+        return $this->render('pages/member/index.html.twig', ['members' => $data['members']]);
     }
 }
