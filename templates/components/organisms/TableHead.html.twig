@@ -1,0 +1,17 @@
+{% set tableHeaders = [
+    'Prénom, Nom',
+    'Né le',
+    'Équipes',
+    'Connexion',
+    'Contacter'
+] %}
+
+<thead class="color-bg-white">
+	<tr>
+		{% for headerLabel in tableHeaders %}
+			<th>
+				<twig:atoms:Text tag="span" class="headline-small text-uppercase color-blue" text="{{ headerLabel }}"/>
+			</th>
+		{% endfor %}
+	</tr>
+</thead>
