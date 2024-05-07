@@ -1,4 +1,4 @@
-<div class="mt-5 mb-3">
+<div class="mt-4 mb-3">
 	<div class="search-field">
 		<twig:atoms:Input type="text" id="" name="" placeholder="Rechercher un membre"/>
 	</div>
@@ -11,21 +11,21 @@
 </div>
 
 <div class="mt-4">
-	<table class="w-100 overflow-x-auto">
+	<table class="w-100 .table-responsive">
 		<twig:organisms:TableHead/>
 		<tbody>
 			{% for member in members %}
 				<tr class='color-bg-white'>
-					<td>
+					<td class="align-top">
 						<div>
 							<twig:atoms:Text tag="span" text="{{member.image}}"/>
 							<twig:atoms:Text tag="span" text="{{member.nom}}"/>
 						</div>
 					</td>
-					<td>
+					<td class="align-top">
 						<twig:atoms:Text tag="p" text="{{member.naissance}}"/>
 					</td>
-					<td>
+					<td class="align-top">
 						{% for equipe in member.equipes %}
 							{% if equipe.role != "" %}
 								<div class="d-flex">
@@ -35,20 +35,22 @@
 								</div>
 							{% endif %}
 							{% if equipe.role == "" %}
-								<div>
-									<twig:atoms:Text class="color-red" tag="p" text="{{equipe.team}}"/>
+								<div class='mb-3'>
+									<twig:atoms:Text class="mb-0 color-red" tag="p" text="{{equipe.team}}"/>
+									<twig:atoms:Text tag="a" href='#' class='color-blue' text="Affecter à une équipe"/>
 								</div>
 							{% endif %}
 						{% endfor %}
 					</td>
-					<td>
+					<td class="align-top">
 						{% if member.connexion != "" %}
 							<twig:atoms:Text tag="p" text="{{member.connexion}}"/>
 						{% else %}
-							<twig:atoms:Text tag="p" text="Jamais connecté"/>
+							<twig:atoms:Text class='mb-0' tag="p" text="Jamais connecté"/>
+							<twig:atoms:Text tag="a" href='#' class='color-blue' text="Renvoyer l'invitation"/>
 						{% endif %}
 					</td>
-					<td>
+					<td class="align-top">
 						<twig:atoms:Text tag="span" text="{{member.contacter}}"/>
 					</td>
 				</tr>
