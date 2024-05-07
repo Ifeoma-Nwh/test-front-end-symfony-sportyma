@@ -1,0 +1,13 @@
+{% set filters = [
+    'Staff',
+    'Joueurs',
+] %}
+
+<div class="mt-3 me-2 dropdown">
+	<twig:atoms:Button class="btn btn-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">{{text}}</twig:atoms:Button>
+	<div class="dropdown-menu">
+		{% for item in filters %}
+			<twig:molecules:Checkbox class="dropdown-item" label="{{item}}"/>
+		{% endfor %}
+	</div>
+</div>
